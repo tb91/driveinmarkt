@@ -71,7 +71,7 @@ export default function StoreDashboard() {
       <StoreCover
         title="Super Shop"
         subtitle="Selchower Str. 1-6, 12049 Berlin"
-        image="/store-cover.jpg"
+        image="https://gd-amsterda.sfo2.cdn.digitaloceanspaces.com/2016/04/coffee-shop-1-e1572034438285.jpg"
       />
       <div class={`${styles.padding} container`}>
         <Tabs defaultActiveKey="products" id="uncontrolled-tab-example">
