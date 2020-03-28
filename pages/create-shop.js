@@ -28,7 +28,7 @@ const CreateShop = () => {
                 name="select-shop"
                 id="selectShop"
                 value="Shop"
-                checked
+                defaultChecked
               />
               <label className="form-check-label" htmlFor="shopRadio">
                 Shop
@@ -108,7 +108,7 @@ const CreateShop = () => {
           </div>
           <div className="custom-file">
             <input type="file" className="custom-file-input" id="picture" />
-            <label className="custom-file-label" for="customFile">
+            <label className="custom-file-label" htmlFor="customFile">
               Choose file
             </label>
           </div>
