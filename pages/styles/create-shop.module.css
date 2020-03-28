@@ -1,10 +1,13 @@
 .container {
   display: flex;
+  flex-direction: column;
 }
 
 .createForm {
   display: flex;
   flex-direction: column;
+  width: 70%;
+  margin: auto;
 }
 
 .radio {
@@ -22,4 +25,15 @@
 
 ._badge {
   margin-right: 0.5rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 200;
+}
+
+.submit {
+  margin: 2rem 0;
+  width: 50%;
 }
