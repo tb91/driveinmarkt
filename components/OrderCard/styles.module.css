@@ -1,0 +1,53 @@
+.container {
+  border: 1px solid #dee2e6;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 4px;
+}
+
+.id {
+  margin: 0;
+  font-weight: bold;
+}
+
+.description {
+  padding: 15px 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.password {
+  margin: 0;
+}
+
+.passwordValue {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.products {
+  padding: 15px 0;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.product p {
+  margin: 0;
+  padding: 0 5px;
+}
+
+.total {
+  padding: 10px 0 0 0;
+  text-align: right;
+}
