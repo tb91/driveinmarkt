@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {useRouter} from 'next/router';
 
@@ -9,9 +9,28 @@ import styles from './styles/add-products.module.scss';
 const CreateShop = () => {
   const router = useRouter();
 
+  const [selectedFile, setSelectedFile] = useState(null);
+
   useEffect(() => {
     router.prefetch('/create-shop');
   });
+
+  const readURL = (file) => {
+    return new Promise((res, rej) => {
+      const reader = new FileReader();
+      reader.onload = (e) => res(e.target.result);
+      reader.onerror = (e) => rej(e);
+      reader.readAsDataURL(file);
+    });
+  };
+
+
+  const handleUploadProduct = async (event) => {
+    const file = event.target.files[0];
+
+    const url = await readURL(file);
+    setSelectedFile(url);
+  };
 
   return (
     <Layout>
@@ -20,7 +39,9 @@ const CreateShop = () => {
         <div className={styles.container}>
           <div className="row">
             <div className="col-sm">
-              <div className={styles.photo}>
+              <input type="file" className={styles.file} onChange={handleUploadProduct} />
+              <div className={styles.photo} onClick={() => {}}>
+                {selectedFile && <img className={styles.image} src={selectedFile} />}
                 <span className={styles.add}>Add Photo</span>
               </div>
             </div>
