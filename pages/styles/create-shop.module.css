@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+}
+
+.createForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio {
+  margin-bottom: 1rem;
+}
+
+.badges {
+  margin-bottom: 1rem;
+}
+
+.badgeLabel {
+  display: block;
+  margin-top: 1rem;
+}
+
+._badge {
+  margin-right: 0.5rem;
+}
