@@ -9,13 +9,12 @@
     "test:ci": "jest --ci"
   },
   "dependencies": {
-    "@zeit/next-sass": "^1.0.1",
     "next": "latest",
-    "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
     "react": "16.12.0",
     "react-dom": "16.12.0",
-    "react-google-maps": "^9.4.5"
+    "react-google-maps": "^9.4.5",
+    "sass": "^1.26.3"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.1.0",

@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from 'react';
 
-import { useRouter } from "next/router";
+import {useRouter} from 'next/router';
 
-import Layout from "../utilities/layout";
+import Layout from '../utilities/layout';
 
-import styles from "./styles/create-shop.module.scss";
+import styles from './styles/create-shop.module.scss';
 
 const CreateShop = () => {
   const router = useRouter();
 
   useEffect(() => {
-    router.prefetch("/create-shop");
+    router.prefetch('/create-shop');
   });
 
   return (
@@ -28,7 +28,7 @@ const CreateShop = () => {
                 name="select-shop"
                 id="selectShop"
                 value="Shop"
-                checked
+                defaultChecked
               />
               <label className="form-check-label" htmlFor="shopRadio">
                 Shop
@@ -108,7 +108,7 @@ const CreateShop = () => {
           </div>
           <div className="custom-file">
             <input type="file" className="custom-file-input" id="picture" />
-            <label className="custom-file-label" for="customFile">
+            <label className="custom-file-label" htmlFor="customFile">
               Choose file
             </label>
           </div>
