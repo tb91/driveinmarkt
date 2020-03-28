@@ -12,7 +12,7 @@ const PROP_TYPES = {
   products: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
-      amount: PropTypes.string,
+      quantity: PropTypes.string,
       price: PropTypes.string
     })
   ).isRequired,
@@ -55,7 +55,7 @@ export default function OrderCard({
         {products.map(product => (
           <div className={styles.product}>
             <p>{product.title}</p>
-            <p>{product.amount}</p>
+            <p>{product.quantity}</p>
             <p>{product.price}</p>
           </div>
         ))}
