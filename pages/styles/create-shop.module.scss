@@ -1,6 +1,12 @@
 .container {
   display: flex;
   flex-direction: column;
+
+  .title {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 200;
+  }
 }
 
 .createForm {
@@ -25,12 +31,6 @@
 
 ._badge {
   margin-right: 0.5rem;
-}
-
-.title {
-  font-size: 3rem;
-  text-align: center;
-  font-weight: 200;
 }
 
 .submit {
