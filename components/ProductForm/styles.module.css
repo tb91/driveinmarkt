@@ -1,0 +1,54 @@
+.container {
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 60%;
+  margin-bottom: 2rem;
+  display: flex;
+  width: 100%;
+}
+
+.photo {
+  border-radius: 5px;
+  height: 200px;
+  width: 250px;
+  background: #e6f1fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add {
+  display: block;
+  color: #0275d8;
+}
+
+.grams {
+  display: flex;
+  flex-direction: row;
+}
+
+.grams input {
+  margin-right: 1rem;
+}
+
+.grid {
+  display: flex;
+}
+
+.form {
+  flex: 1;
+  margin-left: 30px;
+}
+
+.photoPreviewContainer {
+  border: 1px solid #dee2e6;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.photoPreview {
+  width: 150px;
+}
