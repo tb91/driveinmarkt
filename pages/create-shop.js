@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
+import React, {useEffect} from 'react';
 
-import { useRouter } from "next/router";
+import {useRouter} from 'next/router';
 
-import Layout from "../utilities/layout";
+import Layout from '../utilities/layout';
 
-import styles from "./styles/create-shop.module.scss";
+import styles from './styles/create-shop.module.scss';
 
 const CreateShop = () => {
   const router = useRouter();
 
   useEffect(() => {
-    router.prefetch("/create-shop");
+    router.prefetch('/create-shop');
   });
 
   return (
