@@ -17,7 +17,7 @@ const Layout = ({ children }) => (
       />
     </Head>
 
-    <main className="container-fluid w-100" style={{ maxHeight: "90%" }}>
+    <main className=" w-100" style={{ maxHeight: "90%" }}>
       <div className="w-100">
         {children && Children.count(children) > 0 && children}
       </div>
