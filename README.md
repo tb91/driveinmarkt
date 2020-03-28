@@ -1,18 +1,17 @@
-# Next.js + Jest
+# Drivein market
 
-This example shows how to configure Jest to work with Next.js.
+This project enables owners of closed stores due to Covid19 to continue business.
+The shop can upload their products and sell them in the app. 
+Afterwards they do a pickup of the goods.
+You can find out more in this google doc: https://docs.google.com/document/d/1G9uAPkLCmhegFRlGwNS-e9SRGRsJTHRu23diM0FPFis/edit?usp=sharing
 
-This includes Next.js' built-in support for Global CSS, CSS Modules, and TypeScript!
+
 
 ## How to Use
 
-Quickly get started using [Create Next App](https://github.com/zeit/next.js/tree/canary/packages/create-next-app#readme)!
-
-In your terminal, run the following command:
-
-```bash
-npx create-next-app --example with-jest
-```
+npm install
+npm install -g next
+npm start
 
 ## Run Jest Tests
 
