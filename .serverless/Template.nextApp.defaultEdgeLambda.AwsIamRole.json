@@ -2,11 +2,11 @@
   "name": "wyt8y1r-8oaiglk",
   "arn": "arn:aws:iam::857129967173:role/wyt8y1r-8oaiglk",
   "service": [
-    "edgelambda.amazonaws.com",
-    "lambda.amazonaws.com"
+    "lambda.amazonaws.com",
+    "edgelambda.amazonaws.com"
   ],
   "policy": {
-    "arn": "arn:aws:iam::857129967173:role/lambda-ex"
+    "arn": "arn:aws:iam::857129967173:policy/dynamoDb"
   },
   "region": "us-east-1"
 }
