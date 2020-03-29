@@ -1,0 +1,55 @@
+.container {
+  position: relative;
+  height: 500px;
+}
+
+.image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 500px;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  bottom: 0;
+  color: white;
+  z-index: 3;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px 0;
+}
+
+.title {
+  font-size: 70px;
+  font-weight: 300;
+}
+
+.subtitle {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.editButton {
+  background: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  transform: translateY(-10px);
+  padding: 0;
+  line-height: 0;
+  margin-left: 10px;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}

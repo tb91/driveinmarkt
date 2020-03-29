@@ -13,9 +13,11 @@
     "next": "latest",
     "prop-types": "^15.7.2",
     "react": "16.12.0",
+    "react-bootstrap": "^1.0.0",
     "react-dom": "16.12.0",
     "react-google-maps": "^9.4.5",
-    "sass": "^1.26.3",
+    "react-icons": "^3.9.0",
+    "sass": "^1.26.3"
     "serverless-next.js": "^1.9.5"
   },
   "devDependencies": {
