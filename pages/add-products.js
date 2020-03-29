@@ -66,65 +66,67 @@ const CreateShop = () => {
     <Layout>
       <div className="container-md">
         <h1 className={styles.title}>Now add products</h1>
-        {products && products.length > 0 && products.map((product, index) => (
-          <div className={styles.container} key={index}>
-            <div className="row">
-              <div className="col-sm">
-                <input type="file" className={styles.file} onChange={(event) => handleUploadProduct(event, index)} />
-                <div className={styles.photo} onClick={() => {}}>
-                  {selectedFile && product[index].photo && <img className={styles.image} src={product[index].photo} />}
-                  <span className={styles.add}>Add Photo</span>
+        <div className={styles.productGroup}>
+          {products && products.length > 0 && products.map((product, index) => (
+            <div className={styles.container} key={index}>
+              <div className="row">
+                <div className="col-sm">
+                  <input type="file" className={styles.file} onChange={(event) => handleUploadProduct(event, index)} />
+                  <div className={styles.photo} onClick={() => {}}>
+                    {selectedFile && product[index].photo && <img className={styles.image} src={product[index].photo} />}
+                    <span className={styles.add}>Add Photo</span>
+                  </div>
                 </div>
-              </div>
-              <div className="col-sm">
-                <div className="form-group">
-                  <label htmlFor="productName">Product name</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="productName"
-                    placeholder="Enter product name"
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="productDesc">Product description</label>
-                  <textarea
-                    className="form-control"
-                    id="productDesc"
-                    rows="4"
-                  ></textarea>
-                </div>
-                <div className="form-group">
-                  <label htmlFor="price">Price</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="price"
-                    placeholder="Enter price"
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="quantity">Quantity</label>
-                  <div className={styles.grams}>
+                <div className="col-sm">
+                  <div className="form-group">
+                    <label htmlFor="productName">Product name</label>
                     <input
-                      type="number"
+                      type="text"
+                      className="form-control"
+                      id="productName"
+                      placeholder="Enter product name"
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="productDesc">Product description</label>
+                    <textarea
+                      className="form-control"
+                      id="productDesc"
+                      rows="4"
+                    ></textarea>
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="price">Price</label>
+                    <input
+                      type="text"
                       className="form-control"
                       id="price"
+                      placeholder="Enter price"
                     />
-                    <select className="form-control" id="grams" name="grams">
-                      <option>select grams</option>
-                      <option>0 - 10</option>
-                      <option>10 - 50</option>
-                      <option>50 - 100</option>
-                      <option>100 - 200</option>
-                      <option>200 - 1000</option>
-                    </select>
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="quantity">Quantity</label>
+                    <div className={styles.grams}>
+                      <input
+                        type="number"
+                        className="form-control"
+                        id="price"
+                      />
+                      <select className="form-control" id="grams" name="grams">
+                        <option>select grams</option>
+                        <option>0 - 10</option>
+                        <option>10 - 50</option>
+                        <option>50 - 100</option>
+                        <option>100 - 200</option>
+                        <option>200 - 1000</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
         <div className={styles.submit}>
           <button
             type="button"
