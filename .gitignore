@@ -12,6 +12,10 @@
 /.next/
 /out/
 
+# serverless
+.serverless
+.serverless_nextjs
+
 # production
 /build
 
@@ -28,3 +32,4 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+.env
