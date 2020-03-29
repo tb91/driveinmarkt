@@ -1,0 +1,4 @@
+nextApp:
+  component: "serverless-next.js"
+  inputs:
+    policy: "arn:aws:iam::857129967173:policy/dynamoDb"

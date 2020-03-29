@@ -1,0 +1,5 @@
+{
+  "components": {
+    "nextApp": "/home/timmy/.serverless/components/registry/npm/serverless-next.js@1.9.7/node_modules/serverless-next.js"
+  }
+}

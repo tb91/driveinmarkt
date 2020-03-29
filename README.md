@@ -13,8 +13,17 @@ npm install
 npm install -g next
 npm start
 
+## Setup
+
+This project used create-next-app to create a new next app and integrates serverless framework to push APIs to AWS Lambda.
+An environment variable storing the essential AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY is required to use serverless.
+Also next is configured to use serverless using the "serverless-next.js" npm package. Make sure that you use their severless 
+configuration and not the "usual" one with provider.
+
+
 ## Run Jest Tests
 
+--> not available right now.
 ```bash
 npm test
 ```

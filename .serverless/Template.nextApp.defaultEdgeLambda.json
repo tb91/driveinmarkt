@@ -1,0 +1,17 @@
+{
+  "name": "wyt8y1r-pak05m",
+  "hash": "pIkemegkrUJ8GWZzVg603SqHifrQDwZvBFUSegrpZ1s=",
+  "description": "Default Lambda@Edge for Next CloudFront distribution",
+  "memory": 512,
+  "timeout": 10,
+  "code": "/home/timmy/covid19hackathon/driveinsupermarket/.serverless_nextjs/default-lambda",
+  "shims": [],
+  "handler": "index.handler",
+  "runtime": "nodejs10.x",
+  "env": {},
+  "role": {
+    "arn": "arn:aws:iam::857129967173:role/wyt8y1r-8oaiglk"
+  },
+  "arn": "arn:aws:lambda:us-east-1:857129967173:function:wyt8y1r-pak05m",
+  "region": "us-east-1"
+}
