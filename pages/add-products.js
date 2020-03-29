@@ -59,7 +59,12 @@ const CreateShop = () => {
   };
 
   const handleAddMore = () => {
-    setProducts([...products, {[products.length]: initialProductState}]);
+    // setProducts([...products, {[products.length]: initialProductState}]);
+    // TODO: upload to database here and refresh form to be empty
+  };
+  const handleAddAndLeave = ()=>{
+    handleAddMore();
+    // TODO: route to store front
   };
 
   return (
@@ -127,14 +132,25 @@ const CreateShop = () => {
             </div>
           ))}
         </div>
-        <div className={styles.submit}>
-          <button
-            type="button"
-            className="btn btn-lg btn-primary btn-block"
-            onClick={handleAddMore}
-          >
-              Add More
-          </button>
+        <div className="d-flex">
+          <div className={styles.submit}>
+            <button
+              type="button"
+              className="btn btn-lg btn-primary btn-block"
+              onClick={handleAddMore}
+            >
+              Save and add More
+            </button>
+          </div>
+          <div className={styles.submit}>
+            <button
+              type="button"
+              className="btn btn-lg btn-primary btn-block"
+              onClick={handleAddAndLeave}
+            >
+              Save and leave
+            </button>
+          </div>
         </div>
       </div>
     </Layout>
