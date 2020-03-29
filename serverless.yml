@@ -1,22 +1,4 @@
-org: timbudweg
-app: driveinmarkt-app
-service: driveinMarkt
 nextApp:
   component: "serverless-next.js"
-
-functions:
-  createUser:
-    handler: backend/signup.signup
-    events:
-      - http:
-          method: post
-          cors: true
-          path: /createUser
-
-
-provider:
-  name: aws
-  runtime: nodejs12.x
-  region: "eu-central-1"
-  environment:
-    DYNAMODB_TABLE: users
+  inputs:
+    policy: "arn:aws:iam::857129967173:role/lambda-ex"

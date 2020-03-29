@@ -1,0 +1,17 @@
+{
+  "name": "wyt8y1r-z8i5uks",
+  "hash": "ffvX6mECbGZlFx8CBEw/nLqfiocakrEcVHVBtVI856Y=",
+  "description": "API Lambda@Edge for Next CloudFront distribution",
+  "memory": 512,
+  "timeout": 10,
+  "code": "/home/timmy/covid19hackathon/driveinsupermarket/.serverless_nextjs/api-lambda",
+  "shims": [],
+  "handler": "index.handler",
+  "runtime": "nodejs10.x",
+  "env": {},
+  "role": {
+    "arn": "arn:aws:iam::857129967173:role/wyt8y1r-rbdqkm"
+  },
+  "arn": "arn:aws:lambda:us-east-1:857129967173:function:wyt8y1r-z8i5uks",
+  "region": "us-east-1"
+}

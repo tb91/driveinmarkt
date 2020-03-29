@@ -1,0 +1,12 @@
+{
+  "name": "wyt8y1r-rbdqkm",
+  "arn": "arn:aws:iam::857129967173:role/wyt8y1r-rbdqkm",
+  "service": [
+    "edgelambda.amazonaws.com",
+    "lambda.amazonaws.com"
+  ],
+  "policy": {
+    "arn": "arn:aws:iam::857129967173:role/lambda-ex"
+  },
+  "region": "us-east-1"
+}

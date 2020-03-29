@@ -9,6 +9,7 @@
     "test:ci": "jest --ci"
   },
   "dependencies": {
+    "aws-sdk": "^2.648.0",
     "next": "latest",
     "prop-types": "^15.7.2",
     "react": "16.12.0",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.1.0",
     "@testing-library/react": "^9.4.0",
+    "aws-sdk-mock": "^5.1.0",
     "babel-jest": "^25.1.0",
     "eslint": "^6.8.0",
     "eslint-config-google": "^0.14.0",
