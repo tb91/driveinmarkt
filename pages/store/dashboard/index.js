@@ -1,5 +1,6 @@
 import React from "react";
 import { Tab, Tabs } from "react-bootstrap";
+import { v4 as uuidv4 } from "uuid";
 
 import Layout from "../../../utilities/layout";
 import StoreCover from "../../../components/StoreCover";
@@ -78,14 +79,14 @@ export default function StoreDashboard() {
           <Tab eventKey="orders" title="Orders">
             <div className={`${styles.padding} ${styles.ordersGrid}`}>
               {ordersMock.map(order => (
-                <OrderCard {...order} />
+                <OrderCard key={uuidv4()} {...order} />
               ))}
             </div>
           </Tab>
           <Tab eventKey="products" title="Products">
             <div className={`${styles.padding} ${styles.productsGrid}`}>
               {productsMock.map(product => (
-                <ProductForm values={product} />
+                <ProductForm key={uuidv4()} values={product} />
               ))}
             </div>
           </Tab>
