@@ -1,21 +1,29 @@
-# Next.js + Jest
+# Drivein market
 
-This example shows how to configure Jest to work with Next.js.
+This project enables owners of closed stores due to Covid19 to continue business.
+The shop can upload their products and sell them in the app. 
+Afterwards they do a pickup of the goods.
+You can find out more in this google doc: https://docs.google.com/document/d/1G9uAPkLCmhegFRlGwNS-e9SRGRsJTHRu23diM0FPFis/edit?usp=sharing
 
-This includes Next.js' built-in support for Global CSS, CSS Modules, and TypeScript!
+
 
 ## How to Use
 
-Quickly get started using [Create Next App](https://github.com/zeit/next.js/tree/canary/packages/create-next-app#readme)!
+npm install
+npm install -g next
+npm start
 
-In your terminal, run the following command:
+## Setup
 
-```bash
-npx create-next-app --example with-jest
-```
+This project used create-next-app to create a new next app and integrates serverless framework to push APIs to AWS Lambda.
+An environment variable storing the essential AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY is required to use serverless.
+Also next is configured to use serverless using the "serverless-next.js" npm package. Make sure that you use their severless 
+configuration and not the "usual" one with provider.
+
 
 ## Run Jest Tests
 
+--> not available right now.
 ```bash
 npm test
 ```

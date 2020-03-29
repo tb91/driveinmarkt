@@ -1,0 +1,70 @@
+.title {
+    font-size: 3rem;
+    font-weight: 200;
+    margin-bottom: 2rem;
+}
+
+.productGroup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container {
+    border: 1px solid rgba($color: #eee, $alpha: 0.5);
+    border-radius: 5px;
+    padding: .5rem;
+    display: flex;
+    width: calc(49% - 2rem);
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+
+    .file {
+        height: 200px;
+        width: 250px;
+        position: absolute;
+        z-index: 1;
+        opacity: 0;
+        background-color: #fff;
+    }
+
+    .photo {
+        border-radius: 5px;
+        height: 200px;
+        width: 250px;
+        background: #e6f1fb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .image {
+            height: 200px;
+            width: 250px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 5px;
+        }
+
+        .add {
+            display: block;
+            color: #0275d8;
+        }
+    }
+
+    .grams {
+        display: flex;
+        flex-direction: row;
+
+        input {
+            margin-right: 1rem;
+        }
+    }
+}
+
+.submit {
+    margin: 2rem 2rem;
+    width: 30%;    
+}
+  

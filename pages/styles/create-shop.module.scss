@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 200;
+  }
+}
+
+.createForm {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+}
+
+.radio {
+  margin-bottom: 1rem;
+}
+
+.badges {
+  margin-bottom: 1rem;
+}
+
+.badgeLabel {
+  display: block;
+  margin-top: 1rem;
+}
+
+._badge {
+  margin-right: 0.5rem;
+}
+
+.submit {
+  margin: 2rem 0;
+  width: 50%;
+}
