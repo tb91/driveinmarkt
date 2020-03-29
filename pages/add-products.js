@@ -22,12 +22,12 @@ const CreateShop = () => {
 
   const [products, setProducts] = useState([{
     0: {
-      initialProductState,
+      ...initialProductState,
     },
   }]);
 
   useEffect(() => {
-    router.prefetch('/create-shop');
+    router.prefetch('/add-products');
   });
 
   const readURL = (file) => {
@@ -39,18 +39,27 @@ const CreateShop = () => {
     });
   };
 
-  const handleUploadProduct = async (event) => {
+  const handleUploadProduct = async (event, key) => {
     if (event.target.files && event.target.files.length> 0) {
       const file = event.target.files[0];
 
       const url = await readURL(file);
 
       setSelectedFile(url);
+
+      const newProduct = Object.assign(products[key], {[key]: {
+        ...products[key][key],
+        photo: url,
+      }});
+
+      const productSet = products.map((product) => Object.keys(product)[0] === products[key] ? newProduct : product);
+
+      setProducts(productSet);
     }
   };
 
   const handleAddMore = () => {
-    setProducts([...products, {[products.length + 1]: initialProductState}]);
+    setProducts([...products, {[products.length]: initialProductState}]);
   };
 
   return (
@@ -61,9 +70,9 @@ const CreateShop = () => {
           <div className={styles.container} key={index}>
             <div className="row">
               <div className="col-sm">
-                <input type="file" className={styles.file} onChange={handleUploadProduct} />
+                <input type="file" className={styles.file} onChange={(event) => handleUploadProduct(event, index)} />
                 <div className={styles.photo} onClick={() => {}}>
-                  {selectedFile && <img className={styles.image} src={selectedFile} />}
+                  {selectedFile && product[index].photo && <img className={styles.image} src={product[index].photo} />}
                   <span className={styles.add}>Add Photo</span>
                 </div>
               </div>
