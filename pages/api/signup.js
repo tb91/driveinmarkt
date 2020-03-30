@@ -33,7 +33,7 @@ function computeHash(password, salt, fn) {
 
 function storeUser(email, password, salt, fn) {
   // Bytesize
-  const len = 3;
+  const len = 12;
   crypto.randomBytes(len, function(err, token) {
     if (err) return fn(err);
     token = token.toString("hex");
