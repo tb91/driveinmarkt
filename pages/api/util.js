@@ -1,3 +1,5 @@
+import crypto from "crypto";
+
 export const validateUser = user => {
   if (!user) {
     return false;

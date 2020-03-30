@@ -2,7 +2,7 @@
 const AWS = require("aws-sdk");
 const crypto = require("crypto");
 
-import {* as util} from "../../../backend_util"
+import * as util from "../util";
 
 AWS.config.update({
   region: process.env.AWS_REGION
@@ -90,7 +90,6 @@ function sendVerificationEmail(email, token, fn) {
 
 const signup = (req, res) => {
   const { user } = req.body;
-
   if (!util.validateUser(user)) {
     // guarantees user.email and user.password to exist.
     res.status(400);
@@ -125,6 +124,7 @@ const signup = (req, res) => {
       }
     });
   }).catch(err => {
+    console.log(err);
     res.status(500);
     res.send(false);
   });
