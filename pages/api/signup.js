@@ -1,4 +1,4 @@
-const AWS = require('aws-sdk');
+const AWS = require("aws-sdk");
 
 AWS.config.update({
   region: process.env.AWS_REGION,
@@ -11,8 +11,8 @@ const signup = (req, res)=>{
 
   if (!validateUser(user)) {
     res.status(400);
-    res.send('User object does not exist or does ' +
-             'not contain an email and a password.');
+    res.send("User object does not exist or does " +
+             "not contain an email and a password.");
     return;
   }
   const userToInsert={};
@@ -21,16 +21,16 @@ const signup = (req, res)=>{
   return new Promise((resolve, reject)=>{
     // Check for existing email.
     dynamodb.getItem(
-        {TableName: 'users', Key: {email: {S: user.email}}},
+        {TableName: "users", Key: {email: {S: user.email}}},
         function(err, data) {
           if (err) {
             res.status(500);
-            res.send('error:'+err);
+            res.send("error:"+err);
             reject(err);
           } else {
             // If user does not exist yet create dataset.
             if (!data || !data.Item) {
-              dynamodb.putItem({TableName: 'users',
+              dynamodb.putItem({TableName: "users",
                 Item: userToInsert}, function(err, user) {
                 if (err) {
                   res.status(500);
@@ -38,7 +38,7 @@ const signup = (req, res)=>{
                   reject(err);
                 } else {
                   res.status(200);
-                  res.send('Success');
+                  res.send("Success");
                   resolve();
                 }
               });
