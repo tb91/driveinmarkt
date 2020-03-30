@@ -33,11 +33,10 @@ function computeHash(password, salt, fn) {
 
 function storeUser(email, password, salt, fn) {
   // Bytesize
-  const len = 6;
+  const len = 3;
   crypto.randomBytes(len, function(err, token) {
     if (err) return fn(err);
     token = token.toString("hex");
-
     dynamodb.putItem(
       {
         TableName: "users",
