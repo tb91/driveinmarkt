@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Badge } from "react-bootstrap";
+import { v4 as uuidv4 } from "uuid";
 
 import styles from "./styles.module.css";
 
@@ -53,7 +54,7 @@ export default function OrderCard({
       </div>
       <div className={styles.products}>
         {products.map(product => (
-          <div className={styles.product}>
+          <div key={uuidv4()} className={styles.product}>
             <p>{product.title}</p>
             <p>{product.quantity}</p>
             <p>{product.price}</p>

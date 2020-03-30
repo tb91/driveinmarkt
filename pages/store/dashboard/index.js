@@ -1,5 +1,6 @@
 import React from "react";
-import { Tab, Tabs } from "react-bootstrap";
+import {Tab, Tabs} from "react-bootstrap";
+import {v4 as uuidv4} from "uuid";
 
 import Layout from "../../../utilities/layout";
 import StoreCover from "../../../components/StoreCover";
@@ -18,15 +19,15 @@ const ordersMock = [
       {
         title: "Coffee Beans 1",
         quantity: "1",
-        price: "10€"
+        price: "10€",
       },
       {
         title: "Coffee Beans 2",
         quantity: "1",
-        price: "12€"
-      }
+        price: "12€",
+      },
     ],
-    total: "22€"
+    total: "22€",
   },
   {
     id: "#0002",
@@ -37,11 +38,11 @@ const ordersMock = [
       {
         title: "Coffee Beans 1",
         quantity: "2",
-        price: "20€"
-      }
+        price: "20€",
+      },
     ],
-    total: "20€"
-  }
+    total: "20€",
+  },
 ];
 
 const productsMock = [
@@ -52,7 +53,7 @@ const productsMock = [
     description: "",
     price: "10",
     quantity: "250",
-    grams: ""
+    grams: "",
   },
   {
     photo:
@@ -61,8 +62,8 @@ const productsMock = [
     description: "",
     price: "10",
     quantity: "250",
-    grams: ""
-  }
+    grams: "",
+  },
 ];
 
 export default function StoreDashboard() {
@@ -73,19 +74,19 @@ export default function StoreDashboard() {
         subtitle="Selchower Str. 1-6, 12049 Berlin"
         image="https://gd-amsterda.sfo2.cdn.digitaloceanspaces.com/2016/04/coffee-shop-1-e1572034438285.jpg"
       />
-      <div class={`${styles.padding} container`}>
+      <div className={`${styles.padding} container`}>
         <Tabs defaultActiveKey="products" id="uncontrolled-tab-example">
           <Tab eventKey="orders" title="Orders">
             <div className={`${styles.padding} ${styles.ordersGrid}`}>
-              {ordersMock.map(order => (
-                <OrderCard {...order} />
+              {ordersMock.map((order) => (
+                <OrderCard key={uuidv4()} {...order} />
               ))}
             </div>
           </Tab>
           <Tab eventKey="products" title="Products">
             <div className={`${styles.padding} ${styles.productsGrid}`}>
-              {productsMock.map(product => (
-                <ProductForm values={product} />
+              {productsMock.map((product) => (
+                <ProductForm key={uuidv4()} values={product} />
               ))}
             </div>
           </Tab>

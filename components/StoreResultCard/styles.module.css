@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  padding: 20px 15px;
+  align-items: flex-start;
+  width: 100%;
+  background: white;
+  border: none;
+  border-bottom: 1px solid #dee2e6;
+  text-align: left;
+}
+
+.image {
+  width: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.address {
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.tags span {
+  margin-right: 7px;
+}

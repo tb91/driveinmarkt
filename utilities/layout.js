@@ -1,6 +1,7 @@
 import React, { Children } from "react";
-
 import Head from "next/head";
+
+import Header from "../components/Header";
 
 import styles from "./layout.module.css";
 
@@ -16,16 +17,16 @@ const Layout = ({ children }) => (
         crossOrigin="anonymous"
       />
     </Head>
-
+    <Header title="driveinSupermarket" />
     <main className=" w-100" style={{ maxHeight: "90%" }}>
       <div className="w-100">
         {children && Children.count(children) > 0 && children}
       </div>
-      <footer>
-        Powered von einem Freiwilligenteam um die Ausbreitung von Covid19 zu
-        beschränken.
-      </footer>
     </main>
+    <footer>
+      Powered von einem Freiwilligenteam um die Ausbreitung von Covid19 zu
+      beschränken.
+    </footer>
   </div>
 );
 
