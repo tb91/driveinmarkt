@@ -1,0 +1,15 @@
+.grid {
+  display: flex;
+  height: calc(100vh - 160px);
+}
+
+.storeListContainer {
+  height: calc(100vh - 160px);
+  width: 35%;
+  overflow-y: auto;
+}
+
+.mapContainer {
+  height: calc(100vh - 160px);
+  flex: 1;
+}

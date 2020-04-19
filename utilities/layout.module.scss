@@ -1,0 +1,8 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100vh;
+  padding-top: 80px; // defines the offset to make the content appear below the navbar in the top
+}
